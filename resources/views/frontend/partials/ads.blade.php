@@ -9,7 +9,7 @@ $bannerArr = DB::table('banner')->where(['object_id' => 2, 'object_type' => 3])-
       @if($banner->ads_url !='')
       <a id="ban_116" href="{{ $banner->ads_url }}" target="_blank" style="width: 100px; display: block;">
       @endif        
-                  <img src="{{ Helper::showImage($banner->image_url) }}" alt="quang cao ben trai dothi9.com">
+                  <img src="{{ Helper::showImage($banner->image_url) }}" alt="quang cao ben trai cahatvui.com">
               @if($banner->ads_url !='')
       </a>
       @endif
@@ -29,7 +29,7 @@ $bannerArr = DB::table('banner')->where(['object_id' => 3, 'object_type' => 3])-
       @if($banner->ads_url !='')
       <a id="ban_117" href="{{ $banner->ads_url }}" target="_blank" style="width: 100px; display: block;">
       @endif        
-                  <img src="{{ Helper::showImage($banner->image_url) }}" alt="quang cao ben phai dothi9.com">
+                  <img src="{{ Helper::showImage($banner->image_url) }}" alt="quang cao ben phai cahatvui.com">
               @if($banner->ads_url !='')
       </a>
       @endif
