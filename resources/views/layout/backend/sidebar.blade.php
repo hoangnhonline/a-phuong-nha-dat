@@ -15,14 +15,7 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
-      @if(Auth::user()->role == 3)      
-      <li {{ \Request::route()->getName() == "settings.noti" ? "class=active" : "" }}>
-        <a href="{{ route('settings.noti') }}">
-          <i class="fa fa-pencil-square-o"></i> 
-          <span>Thông báo chung</span>         
-        </a>       
-      </li>
-      @endif
+     
       <li class="treeview {{ in_array(\Request::route()->getName(), ['product.index', 'product.create', 'product.edit', 'estate-type.index', 'estate-type.edit', 'estate-type.create', 'cate.index', 'cate.edit', 'cate.create']) ? 'active' : '' }}">
         <a href="#">
           <i class="fa fa-opencart"></i> 
@@ -51,27 +44,7 @@
           <span>Tin ký gửi</span>         
         </a>       
       </li>
-      <li {{ in_array(\Request::route()->getName(), ['cart.create', 'cart.edit', 'cart.index','cart-product.create', 'cart-product.edit', 'cart-product.index']) ? "class=active" : "" }}>
-        <a href="{{ route('cart.index') }}">
-          <i class="fa fa-pencil-square-o"></i> 
-          <span>Giỏ hàng</span>         
-        </a>       
-      </li>       
-      <li class="treeview {{ in_array(\Request::route()->getName(), ['work-group.create', 'work-group.edit', 'work-group.index', 'user-work.create', 'user-work.edit', 'user-work.index']) ? 'active' : '' }}">
-        <a href="#">
-          <i class="fa fa-twitch"></i> 
-          <span>Công việc</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li {{ in_array(\Request::route()->getName(), ['user-work.create', 'user-work.edit', 'user-work.index']) ? "class=active" : "" }}><a href="{{ route('user-work.index') }}"><i class="fa fa-circle-o"></i> Công việc </a></li>
-          @if(Auth::user()->role > 1)
-          <li {{ in_array(\Request::route()->getName(), ['work-group.create', 'work-group.edit', 'work-group.index']) ? "class=active" : "" }}><a href="{{ route('work-group.index') }}"><i class="fa fa-circle-o"></i> Nhóm công việc</a></li>          
-          @endif
-        </ul>
-      </li>
+      
       @if(Auth::user()->role > 1)
       <li {{ in_array(\Request::route()->getName(), ['customer.edit', 'customer.index']) ? "class=active" : "" }}>
         <a href="{{ route('customer.index') }}">
